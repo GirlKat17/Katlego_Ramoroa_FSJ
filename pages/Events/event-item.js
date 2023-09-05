@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import Button from './components/ui/button';
-
+import AddressIcon from './components/icons/address-icon'
 import DataIcon from './components/icons/date-icon'
 import Image from 'next/image';
 import classes from './components/event-item.module.css'
+import ArrowRightIcon from './components/icons/arrow-right-icon'
+
+
 function EventItem(props){
     const { title,image,date,location,id}= props;
     console.log(image)
@@ -26,11 +29,16 @@ function EventItem(props){
                             <time> {humanReadableDate}</time>
                         </div>
                         <div className={classes.address}>
+                            <AddressIcon/>
                             <address> {FormattedAddress }</address>
                         </div>
                     </div>
                     <div className={classes.action}>
-                    <Button link={exploreLink} >Explore Event
+                    <Button link={exploreLink} >
+                        <span> Explore Event</span>
+                        <span className={classes.icon}> <ArrowRightIcon/></span>
+                    
+                    
                     </Button>
                         
                     </div>
