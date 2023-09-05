@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import classes from '../button.module.css'
 function Button (props){
+
+    console.log(props)
 return (
-    <Link href={props.link}className={classes.btn}>
+    <Link href={props.link}
+    className={classes.btn}>
         {props.children}
-  
     </Link>
 )
 }

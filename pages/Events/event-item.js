@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import Button from './components/ui/button';
+
+import DataIcon from './components/icons/date-icon'
 import Image from 'next/image';
 import classes from './components/event-item.module.css'
 function EventItem(props){
@@ -28,7 +30,7 @@ function EventItem(props){
                         </div>
                     </div>
                     <div className={classes.action}>
-                    <Button Link={exploreLink} >Explore Event
+                    <Button link={exploreLink} >Explore Event
                     </Button>
                         
                     </div>
